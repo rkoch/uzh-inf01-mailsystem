@@ -46,38 +46,46 @@ public class MailsystemMain {
         IMessageSource mail;
 
         // Mail that should not get through
+        System.out.println();
         System.out.println("Mail 1 ------------");
         mail = new Mail("hello@test.ch", "Whatever", "Message shouldn't get through");
         msys.receive(mail);
 
 
         // Mail to MISC
+        System.out.println();
         System.out.println("Mail 2 ------------");
         mail = new Mail("hello@rko.io", "Whatever", "New message");
         msys.receive(mail);
 
         // Mail to MISC
+        System.out.println();
         System.out.println("Mail 3 ------------");
         mail = new Mail("hello@somecompany.com", "[STUFF] Good news", "This is some boring news stuff");
         msys.receive(mail);
 
         // Mail that should not get through -> spam
+        System.out.println();
         System.out.println("Mail 4 ------------");
         mail = new Mail("hello@somecompany.com", "[IT] It's spam", "tHizz m3ss4ge is sPAm!!");
         msys.receive(mail);
 
+        System.out.println();
         System.out.println("Mail 5 ------------");
         mail = new Mail("hello@somecompany.com", "[business] this is a business mail", "We have<br> html tags <b>here!</b>");
         msys.receive(mail);
 
+        System.out.println();
         System.out.println("Mail 6 ------------");
         mail = new Mail("mi6@somecompany.com", "[secret] eyes only!", "TROLL!");
         msys.receive(mail);
 
+        System.out.println();
         System.out.println("Mail 7 ------------");
         mail = new Mail("derp@somecompany.com", "[news] derpina cheated on you!", "hehehehe!");
         msys.receive(mail);
 
+        System.out.println();
         System.out.println("-------------------");
         System.out.println();
         System.out.println("All done, shutting down.");
