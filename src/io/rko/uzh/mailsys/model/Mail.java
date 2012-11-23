@@ -44,11 +44,11 @@ public class Mail
     /**
      * Copy constructor
      */
-    public Mail(Mail pOrig) {
-        mSender = pOrig.mSender;
-        mSubject = pOrig.mSubject;
-        mCategory = pOrig.mCategory;
-        mContent = pOrig.mContent;
+    public Mail(IMessageSource pOrig) {
+        mSender = pOrig.getSender();
+        mSubject = pOrig.getSubject();
+        mCategory = pOrig.getCategory();
+        mContent = pOrig.getContent();
     }
 
 
